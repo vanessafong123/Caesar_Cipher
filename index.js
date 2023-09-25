@@ -43,8 +43,6 @@ btnEncrypt.addEventListener('click', () => {
   }
 });
 
-
-
 btnDecrypt.addEventListener('click', () => {
   const shiftValue = parseInt(keyInput.value, 10);
   const decryptedText = caesarCipherDecrypt(textarea.value, shiftValue);
