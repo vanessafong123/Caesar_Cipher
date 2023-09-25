@@ -38,7 +38,7 @@ btnEncrypt.addEventListener('click', () => {
   const encryptedText = caesarCipherEncrypt(textarea.value, shiftValue);
   textarea.value = encryptedText;
   if (textarea.value.trim() === '') {
-    alert('Textbox is blank. Please enter some text.');
+    alert('The textbox below is blank, please enter some text.');
     return;
   }
 });
