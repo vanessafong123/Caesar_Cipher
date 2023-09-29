@@ -5,6 +5,7 @@ const textarea = document.querySelector('#text');
 
 const listLetters = 'abcdefghijklmnopqrstuvwxyz';
 
+  // input upper case
 function caesarCipherEncrypt(plaintext, shift) {
   return plaintext
     .split('')
@@ -47,17 +48,15 @@ btnEncrypt.addEventListener('click', () => {
   const shiftValue = parseInt(keyInput.value, 10);
   const inputText = textarea.value.trim();
 
-  // Check if the input contains only letters
+  // input contains letters
   if (!/^[a-zA-Z]+$/.test(inputText)) {
-    alert('Please enter characters only.');
+    alert('Please enter text only.');
     return;
   }
 
   const encryptedText = caesarCipherEncrypt(inputText, shiftValue);
   textarea.value = encryptedText;
 });
-
-
 
 
 btnDecrypt.addEventListener('click', () => {
