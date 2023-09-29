@@ -43,6 +43,23 @@ btnEncrypt.addEventListener('click', () => {
   }
 });
 
+btnEncrypt.addEventListener('click', () => {
+  const shiftValue = parseInt(keyInput.value, 10);
+  const inputText = textarea.value.trim();
+
+  // Check if the input contains only letters
+  if (!/^[a-zA-Z]+$/.test(inputText)) {
+    alert('Please enter characters only.');
+    return;
+  }
+
+  const encryptedText = caesarCipherEncrypt(inputText, shiftValue);
+  textarea.value = encryptedText;
+});
+
+
+
+
 btnDecrypt.addEventListener('click', () => {
   const shiftValue = parseInt(keyInput.value, 10);
   const decryptedText = caesarCipherDecrypt(textarea.value, shiftValue);
