@@ -9,7 +9,7 @@ function caesarCipherEncrypt(plaintext, shift) {
   return plaintext
     .split('')
     .map((char) => {
-      if (!listLetters.includes(char)) {
+      if (!listLetters.includes(char.toLowerCase())) {
         return char;
       }
 
